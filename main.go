@@ -24,7 +24,7 @@ type WeatherResponse struct {
 
 func getWeather(city string, apiKey string) (string, error) {
 	client := &http.Client{}
-	req, err := http.NewRequest("GET", fmt.Sprintf("%s?lat=%s&lon=%s", weatherAPIURL, city), nil)
+	req, err := http.NewRequest("GET", fmt.Sprintf("%s?lat=%s&lon=%s", weatherAPIURL, "55.75396", "37.620393"), nil)
 	if err != nil {
 		return "", err
 	}
